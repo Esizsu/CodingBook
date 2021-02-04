@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.TimeUnit;
 
-public class Hooks {
+public class Hooks{
     Logger logger = LoggerFactory.getLogger(Hooks.class);
 
     @Before
@@ -20,6 +20,8 @@ public class Hooks {
         logger.info("##### SETUP STARTED (HOOK) ######");
         MyDriver.get().manage().window().maximize();
         MyDriver.get().get(ConfigurationReader.getProperty("baseUrl"));
+        MyDriver.get().manage().deleteAllCookies();
+        MyDriver.get().navigate().refresh();
         MyDriver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
     }
@@ -30,7 +32,7 @@ public class Hooks {
             logger.error("!!!!Test Failed! check the screenshot!!!!");
             byte[] screenshot= ((TakesScreenshot) MyDriver.get()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot,"images/png","Screenshot");
-            //scenario.embed(screenshot,"images/png"); versiyon 4.7.4
+            //scenario.embed(screenshot,"images/png"); version 4.7.4
 
         }else {
             logger.info("Test Completed");

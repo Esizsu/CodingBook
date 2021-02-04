@@ -16,8 +16,8 @@
 
 
     <dependencies>
-        <!--        Bonigarcia : Automatic Selenium WebDriver binaries management in runtime for Java.
-                    We use online WebDriver with this dependency. so that we don't need to add WebDriver on computer -->
+        <!--bonigarcia : Automatic Selenium WebDriver binaries management in runtime for Java.
+            We use online WebDriver with this dependency. so that we don't need to add WebDriver on computer -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
@@ -49,15 +49,15 @@
         </dependency>
 
         <!--    Apache POI - Java API To Access Microsoft Format Files
-                We use apachi.poi dependency to read and write data on excel. -->
+                We use apache.poi dependency to read and write data on excel. -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
             <version>4.0.1</version>
         </dependency>
 
-        <!--        Cucumber – a Behavior Driven Development (BDD) framework which is used with Selenium
-                    for performing acceptance testing.        -->
+        <!-- Cucumber – a Behavior Driven Development (BDD) framework which is used with Selenium
+             for performing acceptance testing.        -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
@@ -66,16 +66,16 @@
 
         <!-- both up and down dependency should be the same version. -->
 
-        <!--        This class tells JUnit to invoke Cucumber JUnit runner.
-                    Executing this class as any JUnit test class will run
-                    all the Features found on the classpath in the same package as this class.-->
+        <!--This class tells JUnit to invoke Cucumber JUnit runner.
+            Executing this class as any JUnit test class will run
+            all the Features found on the classpath in the same package as this class.-->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
             <version>5.7.0</version>
         </dependency>
 
-        <!--        Testing framework for Java-->
+        <!--Testing framework for Java-->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -121,15 +121,16 @@
                     <forkMode>perthread</forkMode>
                     <testFailureIgnore>true</testFailureIgnore>
 
-                    <!--            *Runner means, it will include runner classes name ends with runner.
-                                    *.java means run all java files.-->
+                    <!-- *Runner means, it will include runner classes name ends with runner.
+                       *.java means run all java files.-->
                     <includes>
                         <include>**/*.java</include>
                     </includes>
                 </configuration>
             </plugin>
 
-            <!--            Provides pretty html reports for Cucumber. It works by generating html from the cucumber json file.-->
+            <!-- Provides pretty html reports for Cucumber.
+            It works by generating html from the cucumber json file.-->
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
@@ -141,7 +142,7 @@
                         <goals>
                             <goal>generate</goal>
                         </goals>
-                        <!--                        We create Report path in our project. -->
+                        <!--We create Report path in our project. -->
                         <configuration>
                             <projectName>AutoTraders.com Smoke Test</projectName>
                             <outputDirectory>${project.build.directory}/myReports</outputDirectory>

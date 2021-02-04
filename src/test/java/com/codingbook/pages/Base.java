@@ -12,7 +12,7 @@ public class Base {
         // Tum sayfalrada FinBy anotation'i kullanacagimiz icin. her seferinde yazmamak icin bu pageFactory'i
         // initElement'i yaptik constructor da
     }
-    public void waitSomeTime(Long miliSeconds) {
+    public static void waitSomeTime(Long miliSeconds) {
         try {
             Thread.sleep(miliSeconds);
         } catch (InterruptedException e) {

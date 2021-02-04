@@ -17,7 +17,7 @@ public class ConfigurationReader {
 
         Logger logger = LoggerFactory.getLogger(ConfigurationReader.class);
 
-        // we wrote our try catch in blocks because we want to run it before anything else.
+        //  wrote our try catch in blocks because we want to run it before anything else.
         // Blocks execute as soon as the class runs.
         try {
 
