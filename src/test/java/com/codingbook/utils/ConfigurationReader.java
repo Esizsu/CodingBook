@@ -22,7 +22,7 @@ public class ConfigurationReader {
         try {
 
             //File path of configuration.properties
-            FileInputStream fileInputStream = new FileInputStream("autoconfig.properties");
+            FileInputStream fileInputStream = new FileInputStream("codbookconfig.properties");
             //initialize properties object
             configFile = new Properties();
             //load configuration.properties file

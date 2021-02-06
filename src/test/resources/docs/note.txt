@@ -1,0 +1,7 @@
+Soru 1- Hooks ve Step class larinin icinde bulunan(MyDriver.get().get(ConfigurationReader.getProperty("baseUrl"));)
+        bu code neden iki yerde de var? Birisini comment yaptigimizda yine calisiyor.
+
+Soru 2- Feature dosyasinin altinda Example olarak verilen datalari neden Test ediyoruz?
+        Sadece 1 yada 2 tane Test etsek yeterli degil mi?
+
+Soru 3- TestNG ve JUnit arasindaki farklar nelerdir?

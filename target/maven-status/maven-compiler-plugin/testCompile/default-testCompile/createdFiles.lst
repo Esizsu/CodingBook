@@ -1,0 +1,9 @@
+com\codingbook\pages\Comment.class
+com\codingbook\runner\Runner.class
+com\codingbook\utils\MyDriver.class
+com\codingbook\pages\MainPage.class
+com\codingbook\stepdef\CommentStep.class
+com\codingbook\pages\Base.class
+com\codingbook\stepdef\MainPageSteps.class
+com\codingbook\utils\ConfigurationReader.class
+com\codingbook\stepdef\Hooks.class
