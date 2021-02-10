@@ -1,3 +1,4 @@
+@smoke_test, @unit_test
 Feature: Comment Test
   Scenario Outline: Write a comment
     Given Navigate to CodingBook website

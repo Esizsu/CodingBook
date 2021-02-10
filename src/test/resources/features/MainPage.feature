@@ -1,3 +1,4 @@
+@Smoke
 Feature: CodingBook Main Page
   Scenario: Test CodingBook Logo
     Given User opens CodingBook web page

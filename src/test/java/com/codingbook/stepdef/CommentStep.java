@@ -1,6 +1,7 @@
 package com.codingbook.stepdef;
 
 import com.codingbook.pages.Comment;
+import com.codingbook.utils.ConfigurationReader;
 import com.codingbook.utils.MyDriver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -19,7 +20,7 @@ public class CommentStep {
 
     @Given("Navigate to CodingBook website")
     public void navigateToCodingBookWebsite() {
-        //  MyDriver.get().get(ConfigurationReader.getProperty("baseUrl"));
+        MyDriver.get().get(ConfigurationReader.getProperty("baseUrl"));
 
         MyDriver.get().manage().deleteAllCookies();
         waitSomeTime(3000L);

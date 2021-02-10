@@ -1,6 +1,7 @@
 package com.codingbook.stepdef;
 
 import com.codingbook.pages.MainPage;
+import com.codingbook.utils.ConfigurationReader;
 import com.codingbook.utils.MyDriver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -20,7 +21,7 @@ public class MainPageSteps{
 
     @Given("User opens CodingBook web page")
     public void userOpensCodingBookWebPage() {
-       // MyDriver.get().get(ConfigurationReader.getProperty("baseUrl")); bunu hooks class'tan aliyor
+       MyDriver.get().get(ConfigurationReader.getProperty("baseUrl")); //bunu hooks class'tan aliyor
         MyDriver.get().manage().deleteAllCookies();
         waitSomeTime(3000L);
         String expected = "CodingBook – Shape your future";

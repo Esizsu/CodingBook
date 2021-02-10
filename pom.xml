@@ -84,18 +84,18 @@
         </dependency>
 
 
-        <dependency>
-            <groupId>com.aventstack</groupId>
-            <artifactId>extentreports</artifactId>
-            <version>4.0.9</version>
-            <scope>test</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.aventstack</groupId>-->
+<!--            <artifactId>extentreports</artifactId>-->
+<!--            <version>4.0.9</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
 
-        <dependency>
-            <groupId>com.aventstack</groupId>
-            <artifactId>extentreports-cucumber4-adapter</artifactId>
-            <version>1.0.7</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.aventstack</groupId>-->
+<!--            <artifactId>extentreports-cucumber4-adapter</artifactId>-->
+<!--            <version>1.0.7</version>-->
+<!--        </dependency>-->
 
 
         <dependency>
@@ -112,29 +112,17 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.1</version>
-
-                <!--we can run how many feature files we want to test with threadCount. feature file numbers 1,2,3,4 etc.   -->
+                <version>3.0.0-M1</version>
                 <configuration>
-<!--             <parallel>all</parallel>-->
-<!--             <threadCount>2</threadCount>-->
-<!--             <forkMode>perthread</forkMode>-->
-<!--             <testFailureIgnore>true</testFailureIgnore>-->
-
                     <parallel>methods</parallel>
+                    <!--<forkMode>perthread</forkMode>-->
                     <threadCount>2</threadCount>
-                    <!--  <forkMode>perthread</forkMode>-->
-                    <useUnlimitedThreads>true</useUnlimitedThreads>
-                    <perCoreThreadCount>true</perCoreThreadCount>
-                    <threadCountClasses>2</threadCountClasses>
-                    <forkCount>2</forkCount>
+                    <perCoreThreadCount>false</perCoreThreadCount>
                     <testFailureIgnore>true</testFailureIgnore>
 
-
-                    <!-- *Runner means, it will include runner classes name ends with runner.
-                       *.java means run all java files.-->
                     <includes>
-                        <include>**/*.java</include>
+                        <!-- *Runner means, it will include runner classes name ends with runner.-->
+                        <include>**/*Runner*.java</include>
                     </includes>
                 </configuration>
             </plugin>
@@ -154,7 +142,7 @@
                         </goals>
                         <!--We create Report path in our project. -->
                         <configuration>
-                            <projectName>AutoTraders.com Smoke Test</projectName>
+                            <projectName>CodingBook.com Smoke Test</projectName>
                             <outputDirectory>${project.build.directory}/myReports</outputDirectory>
                             <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
                         </configuration>

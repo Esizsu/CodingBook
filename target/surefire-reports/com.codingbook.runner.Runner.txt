@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.codingbook.runner.Runner
 -------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 28.538 s - in com.codingbook.runner.Runner
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 67.212 s - in com.codingbook.runner.Runner
